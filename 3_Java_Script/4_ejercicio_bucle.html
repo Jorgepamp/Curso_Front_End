@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Ejercicio Bucle</title>
+	<meta charset="UTF-8"/>
+
+</head>
+
+<body>
+
+	<h3>Bucles</h3>
+
+	<script>
+
+		var veces;
+		var contador;
+		contador = prompt("Por qué número quieres empezar el contador");
+		contador = parseFloat(contador);
+		veces = prompt ("Por qué número quieres que termine el contador");
+		veces = parseFloat(veces);
+		while (contador > veces) {
+		alert (contador); contador=contador - 1;
+		}
+//parseFloat (XX) ¿qué es esto? supuestamente es sólo para cuando se suma y no cuando se resta.
+		var veces = 0;
+		var contador;
+		contador = prompt("Por qué número quieres empezar el contador");
+		contador = parseFloat(contador);
+		while (contador > veces) {
+		alert (contador); contador=contador - 1;
+		}
+
+		var inicio = prompt("Valor inicio");
+		var final = prompt("Valor de fin");
+		inicio = parseFloat (inicio);
+		fin =parseFloat (fin);
+		var contador=inicio;
+		if (inicio > fin){
+			while (contador < fin)
+				alert (contador);
+				contador=contador + 1;
+		}
+
+
+	</script>
+	</body>
+
+</html>

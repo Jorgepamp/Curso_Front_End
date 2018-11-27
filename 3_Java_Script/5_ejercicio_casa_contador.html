@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Ejercicio Bucle</title>
+	<meta charset="UTF-8"/>
+
+</head>
+
+<body>
+
+	<h3>Bucles</h3>
+
+	<script>
+
+//Un sólo bucle con un if dentro.
+	var inicio;
+	var final;
+	inicio = prompt("Inicio del contador");
+	final = prompt("Fin del contador");
+	inicio = parseFloat(inicio); // parseInt para números enteros y parseFloat para números decimales
+	final = parseFloat(final);
+	while (final !== inicio){ // Comparadores: || es "o", !== es diferente, != es distinto de valor y tipo; === es igual de valor y tipo, == es igual de valor
+		alert(inicio);
+		if (inicio < final){
+			inicio=inicio + 1; // aumentar en uno el contador. Si se quisiera sumar 0.5 se pone con punto no con coma.
+		}else if (inicio>final) { // si por ejemplo, se tienen muchas variables y sólo se quiere controlar una se pondría solo "else {} sin if"
+			inicio=inicio -1;
+		}
+	}
+	alert(inicio); // repetimos el alert para que también muestre el número del final que hemos introducido.
+
+
+//Con dos bucles y sin if
+
+var veces;
+var contador;
+contador = prompt("Por qué número quieres empezar el contador");
+contador = parseFloat(contador);
+veces = prompt ("Por qué número quieres que termine el contador");
+veces = parseFloat(veces);
+while (contador > veces) {
+	alert (contador); contador=contador - 1;
+	}
+var veces;
+var contador;
+contador = prompt("Por qué número quieres empezar el contador");
+veces = prompt ("Por qué número quieres que termine el contador");
+veces = parseFloat(veces);
+contador = parseFloat(contador);
+while (contador < veces) {
+	alert (contador); contador=contador + 1;
+	}
+
+// Con un bucle y sin if.
+
+
+
+
+
+
+
+
+/*	var veces;
+	var contador;
+	contador = prompt("Por qué número quieres empezar el contador");
+	contador = parseFloat(contador);
+	veces = prompt ("Por qué número quieres que termine el contador");
+	veces = parseFloat(veces);
+	while (contador > veces) {
+	alert (contador); contador=contador - 1;
+}
+	var veces;
+	var contador;
+	contador = prompt("Por qué número quieres empezar el contador");
+	veces = prompt ("Por qué número quieres que termine el contador");
+	veces = parseFloat(veces);
+	contador = parseFloat(contador);
+	while (contador < veces) {
+		alert (contador); contador=contador + 1;
+		}
+// que identifique si tiene que sumar o restar.*/
+
+	</script>
+	</body>
+
+</html>

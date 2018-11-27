@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Condiciones</title>
+	<meta charset="UTF-8"/>
+
+</head>
+
+<body>
+	<h3>Condiciones</h3>
+
+
+
+	<script>
+		var age;
+		age= prompt("Dime tu edad");
+		//Condición básica
+		if (age < 18)
+		{
+			alert("Under age");
+		}
+
+// Esto es lo mismo que la condición bifurcada de abajo pero escrito de otra forma. Esto es una expresión.
+		var ifIsAdult = age >= 18;
+		if (ifIsAdult == true)
+		{
+			alert ("Adult");
+		} else //cuando es menor de edad.
+		{
+				if (age < 3)
+				{
+						alert ("It's a baby!");
+				}
+				else if (age >= 3 && age <13)
+				{
+				alert ("It's a child!")
+				}
+			 else if (age >= 13 && age <18)
+				{
+					alert ("It's a teenager!")
+				}
+			{
+			alert ("Under age");
+			}
+		}
+
+
+		// Condición biburcada.
+		if (age < 18)
+		{
+			alert ("Under age");
+		} else {
+			alert ("Adult");
+		}
+	/*	//Ejemplo Booleanos
+		if (true) {
+			alert ("It's true")
+		}
+		//Cuando se pone cero no se muestra, no lo lee. También se puede poner "0" en vez de false, significa lo mismo.
+			alert ("It's false")
+		if (false) {
+		} */
+
+
+	</script>
+</body>
+
+
+</html>
