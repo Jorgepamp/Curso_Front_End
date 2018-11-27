@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Título</title>
+	<meta charset="UTF-8"/>
+
+</head>
+
+<body>
+
+	<script>
+//1. Convalidación de datos: Pedir el inicio y el final hasta que sea un número. Asegurarse que el user meta un número.
+// se haría con un bucle que se ejecuta una y otra vez hasta que el valor (inicio o fin) no es un número
+	var inicio;
+	var final;
+
+	var inicioNoEsUnNumero = isNaN(inicio);
+	while (inicioNoEsUnNumero){
+		inicio=prompt ("Inicio del contador");
+		inicioNoEsUnNumero = isNaN(inicio);
+	}
+// NO FUNCIONA DE ESTA FORMA
+/*	while (typeof(final) != "number"){
+		final = prompt ("Fin del contador");
+		final = parseInt (final);
+		alert (typeof(final));
+	}*/
+	var finalNoEsUnNumero = isNaN(final);
+	while (finalNoEsUnNumero){
+		final=prompt ("Fin del contador");
+		finalNoEsUnNumero = isNaN(final);
+	}
+
+
+	inicio = parseFloat(inicio);
+	final = parseFloat(final);
+
+	while (final !== inicio){
+		alert(inicio);
+		if (inicio < final){
+			inicio=inicio + 1;
+		}else if (inicio>final) {
+			inicio=inicio -1;
+		}
+	}
+	alert(inicio);
+	</script>
+</body>
+
+
+</html>
