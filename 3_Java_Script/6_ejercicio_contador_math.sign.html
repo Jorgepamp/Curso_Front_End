@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<title>contador</title>
-	<meta charset="UTF-8"/>
+	<meta charset="UTF-8" />
 
 </head>
 
 <body>
 
 	<script>
-	var inicio;
-	var final;
+		var inicio;
+		var final;
 
-	inicio = prompt("Inicio del contador");
-	final = prompt("Fin del contador");
-	inicio = parseFloat(inicio);
-	final = parseFloat(final);
-	var suma = Math.sign(final - inicio); // esa función siempre da 1, -1 o 0,
-	while (inicio !== final){
+		inicio = prompt("Inicio del contador");
+		final = prompt("Fin del contador");
+		inicio = parseFloat(inicio);
+		final = parseFloat(final);
+		var suma = Math.sign(final - inicio); // esa función siempre da 1, -1 o 0,
+		while (inicio !== final) {
+			alert(inicio)
+			inicio = inicio + suma;
+		}
 		alert(inicio)
-		inicio = inicio + suma;
-	}
-alert(inicio)
-
 	</script>
 </body>
 

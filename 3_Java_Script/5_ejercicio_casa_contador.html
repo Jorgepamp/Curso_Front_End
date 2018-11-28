@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<title>Ejercicio Bucle</title>
-	<meta charset="UTF-8"/>
+	<meta charset="UTF-8" />
 
 </head>
 
@@ -11,83 +12,74 @@
 	<h3>Bucles</h3>
 
 	<script>
-
-//1.Un sólo bucle con un if dentro.
-	var inicio;
-	var final;
-	inicio = prompt("Inicio del contador");
-	final = prompt("Fin del contador");
-	inicio = parseFloat(inicio); // parseInt para números enteros y parseFloat para números decimales
-	final = parseFloat(final);
-	alert("TIPO: " + typeof(inicio)) // identifica el tipo de variable que es si es: String, number, boolean, null, undefined, solo es informativo
-	while (final !== inicio){ // Comparadores: || es "o", !== es diferente, $$ es "y",  != es distinto de valor y tipo; === es igual de valor y tipo, == es igual de valor
-		alert(inicio);
-		if (inicio < final){
-			inicio=inicio + 1; // aumentar en uno el contador. Si se quisiera sumar 0.5 se pone con punto no con coma.
-		}else if (inicio>final) { // si por ejemplo, se tienen muchas variables y sólo se quiere controlar una se pondría solo "else {} sin if"
-			inicio=inicio -1;
+		//1.Un sólo bucle con un if dentro.
+		var inicio;
+		var final;
+		inicio = prompt("Inicio del contador");
+		final = prompt("Fin del contador");
+		inicio = parseFloat(inicio); // parseInt para números enteros y parseFloat para números decimales
+		final = parseFloat(final);
+		alert("TIPO: " + typeof(inicio)) // identifica el tipo de variable que es si es: String, number, boolean, null, undefined, solo es informativo
+		while (final !== inicio) { // Comparadores: || es "o", !== es diferente, $$ es "y",  != es distinto de valor y tipo; === es igual de valor y tipo, == es igual de valor
+			alert(inicio);
+			if (inicio < final) {
+				inicio = inicio + 1; // aumentar en uno el contador. Si se quisiera sumar 0.5 se pone con punto no con coma.
+			} else if (inicio > final) { // si por ejemplo, se tienen muchas variables y sólo se quiere controlar una se pondría solo "else {} sin if"
+				inicio = inicio - 1;
+			}
 		}
-	}
-	alert(inicio); // repetimos el alert para que también muestre el número del final que hemos introducido.
+		alert(inicio); // repetimos el alert para que también muestre el número del final que hemos introducido.
 
 
 
-//2.Con dos bucles y sin if
+		//2.Con dos bucles y sin if
 
-var veces;
-var contador;
-contador = prompt("Por qué número quieres empezar el contador");
-contador = parseFloat(contador);
-veces = prompt ("Por qué número quieres que termine el contador");
-veces = parseFloat(veces);
-alert (contador);
-while (contador > veces) {
-		contador=contador - 1;
-		alert (contador);
-	}
-/*var veces;
-var contador;
-contador = prompt("Por qué número quieres empezar el contador");
-veces = prompt ("Por qué número quieres que termine el contador");
-veces = parseFloat(veces);
-contador = parseFloat(contador);*/
-while (contador < veces) { // para que muestre el  último número también se puede añadir = entre el < o >
-		contador=contador + 1;
-		alert (contador);
-	}
+		var veces;
+		var contador;
+		contador = prompt("Por qué número quieres empezar el contador");
+		contador = parseFloat(contador);
+		veces = prompt("Por qué número quieres que termine el contador");
+		veces = parseFloat(veces);
+		alert(contador);
+		while (contador > veces) {
+			contador = contador - 1;
+			alert(contador);
+		}
+		/*var veces;
+		var contador;
+		contador = prompt("Por qué número quieres empezar el contador");
+		veces = prompt ("Por qué número quieres que termine el contador");
+		veces = parseFloat(veces);
+		contador = parseFloat(contador);*/
+		while (contador < veces) { // para que muestre el  último número también se puede añadir = entre el < o >
+			contador = contador + 1;
+			alert(contador);
+		}
 
-// 3. Con un bucle y sin if. A mi este no me funciona.
-/*var contador_1 = inicio;
-var contador_2 = inicio;
-while (contador_1 < final || contador_2 > final){
-	alert (Contador_1 + " - " + contador_2);
-	contador_1 = contador_1 +1;
-	contador_2 = contador_2 -1;
-}*/
+		// 3. Con un bucle y sin if. A mi este no me funciona.
+		/*var contador_1 = inicio;
+		var contador_2 = inicio;
+		while (contador_1 < final || contador_2 > final){
+			alert (Contador_1 + " - " + contador_2);
+			contador_1 = contador_1 +1;
+			contador_2 = contador_2 -1;
+		}*/
 
-// 3. Con buble sin if, opción Math.sign().
+		// 3. Con buble sin if, opción Math.sign().
 
-var inicio;
-var final;
-var suma = Math.sign(final - fin);
-inicio = prompt("Inicio del contador");
-final = prompt("Fin del contador");
-inicio = parseFloat(inicio);
-final = parseFloat(final);
-	alert (inicio);
-while (inicio !== final){
-	alert(inicio)
-	inicio = inicio + suma;
-}
-
-
-
-
-
-
-
-
+		var inicio;
+		var final;
+		var suma = Math.sign(final - fin);
+		inicio = prompt("Inicio del contador");
+		final = prompt("Fin del contador");
+		inicio = parseFloat(inicio);
+		final = parseFloat(final);
+		alert(inicio);
+		while (inicio !== final) {
+			alert(inicio)
+			inicio = inicio + suma;
+		}
 	</script>
-	</body>
+</body>
 
 </html>
