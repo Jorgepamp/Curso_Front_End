@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Objetos</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+	<h3>Ejemplos de Objetos.</h3>
+	<script>
+		var object1 = new Object(); //Es la función constructora de objetos.
+		object1.subValue = 10; // después del punto va la propiedad/variable/atributo que quieres darle al objeto.
+		object1.otherValue = "Text"; // se llaman variables miembros y van siempre después con un punto.
+		object1.atributeObject = new Object(); // Cuando se pone new Object, siempre va con mayúscula la "O".
+		object1.memberVariable = true;
+
+		// Persona 1:
+		var person1 = new Object();
+		person1.name = "Víctor";
+		person1.lastName1 = "Gil";
+		person1.lastName2 = "Molina";
+		person1.age = 28;
+		person1.pay = prompt("Dime el salario de " + person1.name);
+		person1.pay = parseFloat(person1.pay); // float para decimales Int para enteros, igualmente no me funciona. si lo quito se queda como texto y lo coge bien.
+		if (person1.pay > 0) {
+			person1.work = true;
+		} else {
+			person1.work = false;
+		}
+
+		person1.work = true;
+		// document.write("<b>Nombre:</b>" + person1.name + " " + person1.lastName1 + " " + person1.lastName2 + ". ");
+		// document.write("<br/>")
+		// document.write("<b>Edad:</b> " + person1.age + " años");
+		// document.write("<br/> <b>Salario:</b> " + person1.pay + " €");
+
+
+		// Persona 2:
+		var person2 = new Object();
+		person2.name = prompt("Dime tu nombre: ");
+		person2.lastName1 = prompt("Dime tu primer apellido " + person2.name + ":");
+		person2.lastName2 = prompt("Dime tu segundo apellido " + person2.name + " " + person2.lastName1 + ":");
+		person2.age = prompt("Dime tu edad " + person2.name + " :");
+		person2.pay = prompt("Dime tu salario " + person2.name);
+		person2.pay = parseFloat(person1.pay);
+
+		// document.write("<br/><br/><b>Nombre:</b>" + person2.name + " " + person2.lastName1 + " " + person2.lastName2 + ". ");
+		// document.write("<br/>")
+		// document.write("<b>Edad:</b> " + person2.age + " años");
+		// document.write("<br/> <b>Salario:</b> " + person2.pay + " € <br/>");
+
+		// ordenar por las siguientes variables
+		var finalOrder = prompt("¿Qué orden quieres para los datos?Pon n para que se ordenen alfabéticamente, una a por apellido y una e para la edad.");
+		var data1 = ("<br/> <b>Nombre: </b>" + person1.name + "<br/> <b>Apellidos: </b>" + person1.lastName1 + " " + person1.lastName2 + "<br/> <b>Edad:</b>  " + person1.age + "<br/> <b>Salario: </b>" + person1.pay + "€ <br/>");
+		var data2 = ("<br/> <b>Nombre: </b>" + person2.name + "<br/> <b>Apellidos: </b>" + person2.lastName1 + " " + person2.lastName2 + "<br/> <b>Edad:</b>  " + person2.age + "<br/> <b>Salario: </b>" + person2.pay + "€ <br/>");
+		while (finalOrder !== "a" && finalOrder !== "e" && finalOrder !== "n") {
+			finalOrder = prompt("¿Qué orden quieres para los datos?Pon n para que se ordenen alfabéticamente, una a por apellido y una e para la edad.");
+
+		}
+
+
+		if (finalOrder === "n") {
+			if (person1.name > person2.name) {
+				document.write(data1 + (" ") + data2)
+			} else {
+				document.write(data2 + (" ") + data1)
+			}
+
+		} else if (finalOrder === "e") {
+			if (person1.age < person2.age) {
+				document.write(data1 + ("<br/>") + data2)
+			} else {
+				document.write(data2 + ("<br/>") + data1)
+			}
+
+		} else if (finalOrder === "a") {
+			if (person1.lastName1 < person2.lastName1) {
+				document.write(data1 + ("<br/>") + data2)
+			} else {
+				document.write(data2 + ("<br/>") + data1)
+			}
+
+		}
+	</script>
+
+
+</body>
+
+
+</html>

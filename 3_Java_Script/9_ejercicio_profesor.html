@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejercicio profesor</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+	<h3>Prueba profesor</h3>
+	<script>
+		// no me funciona.....
+		var name = "";
+		//	var nametext = "";
+		var agetext = "";
+		var age = parseInt(agetext); // es bueno darle un valor a la variable y tenerlo controlado en el código en todo momento.
+
+		while (isNaN(age)) {
+			agetext = prompt("Indique su edad");
+			age = parseInt(agetext);
+			while (age <= 0) {
+				agetext = prompt("Indique su edad");
+				age = parseInt(agetext);
+			}
+		}
+		var name = prompt("Indique su nombre")
+		while (name = "" || isNaN(parseInt(name)) == false) {
+			name = prompt("Indique su nombre");
+			// name = parseInt(nametext);
+		}
+
+		document.write("<br/>¡Anda! te llamas " + name + " y tienes " + age + " años.");
+	</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Título</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+
+	<script>
+		var notes = new Array();
+		notes[0] = 3;
+		notes[1] = 7;
+		notes[2] = 8.5;
+		notes[3] = 10;
+		notes[4] = 5.5;
+
+		var position = 0;
+		while (position < 5) {
+			document.write("<br/> <b>Elemento</b> " + position + ": " + notes[position]);
+			position = position + 1;
+		}
+
+		var cities = ["Madrid", "Barcelona", "Murcia"]; // otra forma de hacerlo pero que apenas se usa:
+		//var brands = New Array("Madrid", "Barcelona", "Murcia");
+		position = 0;
+		while (position < 3) {
+			document.write("<br/><br/> <b>Elemento</b> " + position + ": " + cities[position]);
+			position = position + 1;
+		}
+
+		var phone = new Array();
+		phone[0] = new Object();
+		phone[0].brand = "Apple";
+		phone[0].ram = 8;
+
+		phone[1] = new Object();
+		phone[1].brand = "Samsung";
+		phone[1].ram = 3;
+
+		phone[2] = new Object();
+		phone[2].brand = "Nokia";
+		phone[2].ram = 2;
+
+		document.write("<br/> <b>Ram: </b> " + phone[1].ram + "Gb <br/>");
+
+		document.write("<br/> <b>Ram último elemento de la lista: </b> " + phone[phone.length - 1].ram + "Gb");
+	</script>
+</body>
+
+
+</html>

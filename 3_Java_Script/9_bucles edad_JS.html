@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Object Document</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+	<h1>Object Document</h1>
+
+	<script>
+		// document: objeto que corresponde al documento html.
+		// write: es una función propia del objeto document, es decir un método.
+		document.write("<h3>Mostrando texto</h3>"); // me ha creado un título en el body
+		document.write("Lorem ipsu");
+
+		var name = prompt("Pon aquí tu nombre");
+		while (name == "") {
+			if (name == "") { // las "" sin nada dentro es si se deja vacío.
+				alert("¿No tienes nombre?");
+				name = prompt("Vuelve a introducir tu nombre");
+				name = parseInt(name);
+			}
+		}
+		var age = prompt("Pon aquí tu edad");
+		while (age == "" /*|| age =<0*/ ) { // las "" sin nada dentro es si se deja vacío. // parseInt convierte un texto en número
+			while (age == "") {
+				alert("¿No tienes edad?");
+				age = prompt("Vuelve a introducir tu edad");
+				age = parseInt(age);
+			}
+		}
+		alert("Hola " + name + ":\n - Tu edad es:\n - \"" + age + " años\"")
+
+		//document.write("<br/>¡Anda! te llamas " + name + " y tienes " + age + " años."); // he puesto <br/> para que no se ponga en la misma línea que el texto anterior.
+	</script>
+</body>
+
+
+</html>

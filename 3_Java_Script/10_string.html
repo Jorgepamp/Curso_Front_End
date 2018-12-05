@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>String</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+	<h3>Strings, métodos y propiedades</h3>
+
+	<script>
+		var text = prompt("Introduzca un texto");
+		document.write("Su texto:<br/>" + text + "<br/>");
+		//document.write(text + "</br>"); // esto es igual que lo de antes pero dividido para que sea más legible.
+
+		document.write("Longitud =".concat(text.length).concat(" caracteres") + "<br/>"); //length cuenta el número de letras. y concat()es igual que poner un +.
+		document.write("En mayúsculas: " + text.toUpperCase() + "<br/>");
+		document.write("En minúsculas: " + text.toLowerCase() + "<br/>");
+		document.write("Primer carácter: " + text.charAt(0) + "<br/>");
+		document.write("Tercer carácter: " + text.charAt(2) + "<br/>");
+		document.write("Sexto carácter: " + text.charAt(5) + "<br/>");
+		document.write("Primer espacio está en: " + text.indexOf(" ") + "<br/>");
+		document.write("La mitad del texto está: " + text.substring(text.length / 2)); // quiere dividirlo en dos por eso pone / 2 después de text.length
+	</script>
+</body>
+
+
+</html>

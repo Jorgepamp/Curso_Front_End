@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Bucles for y do-while</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+	<h3>Bucles for y do-while</h3>
+
+	<table>
+		<!-- <tr>
+			<th>Tabla del 1</th>
+			th para las cabeceras de las tablas
+			<th>Tabla del 2</th>
+			<th>Tabla del 3</th>
+		</tr>
+		<tr>
+			<td>1*1=1</td>
+			<td>2*1=2</td>
+			<td>3*1=3</td>
+		</tr>
+		<tr>
+			<td>1*2=2</td>
+			<td>2*2=4</td>
+			<td>3*2=6</td>
+		</tr>
+		<tr>
+			<td>1*3=3</td>
+			<td>2*3=6</td>
+			<td>3*3=9</td>
+		</tr>
+	</table> -->
+		<script>
+			//Bucle for:
+			/*	var prize = 90;
+				prize += 1.21; // le multiplica a "prize" 1.21. Es igual que poner "prize=prize*1". Poner "++" suma 1 a sí mismo. EJ j= j+1 ; j+=1; j++ los tres es lo mismo.*/
+			document.write("<table border= '1; cellspacing='5px; cellpadding='5px'>")
+			document.write("<th>TABLA DEL 1</th>" + "<th>TABLA DEL 2</th>" + "<th>TABLA DEL 3</th>" + "<th>TABLA DEL 4</th>" + "<th>TABLA DEL 5</th>");
+			for (var i = 1; i <= 10; i++) { // poner "+=" significa que suma a su propia variable.
+				document.write("<tr><td> 1 *" + i + " = " + 1 * i + "</td> <td> 2 * " + i + " = " + 2 * i + " </td><td> 3 * " + i + " = " + 3 * i + " </td><td> 4 * " + i + " = " + 4 * i + " </td><td> 5 * " + i + " = " + 5 * i + "</td></tr>")
+			}
+			// document.write("</table>")
+			//
+			// document.write("<table border= '1'>")
+			document.write("<th>TABLA DEL 6</th>" + "<th>TABLA DEL 7</th>" + "<th>TABLA DEL 8</th>" + "<th>TABLA DEL 9</th>" + "<th>TABLA DEL 10</th>");
+			for (var i = 1; i <= 10; i++) { // poner "+=" significa que suma a su propia variable.
+				document.write("<tr><td> 6 *" + i + " = " + 6 * i + "</td> <td> 7 * " + i + " = " + 7 * i + " </td><td> 8 * " + i + " = " + 8 * i + " </td><td> 9 * " + i + " = " + 9 * i + " </td><td> 10 * " + i + " = " + 10 * i + "</td></tr>")
+			}
+			document.write("</table>")
+		</script>
+</body>
+
+
+</html>

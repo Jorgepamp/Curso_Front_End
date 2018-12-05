@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Título</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+
+	<script>
+		/* Ejercicios:
+1- hacer de un texto que la primera letra sea en mayúsculas y el resto en minúsuclas:
+		HOLA -> Hola
+		hola -> Hola
+2- Convertir la primera letra de cada palabra a mayúsculas y el resto en minúsculas.
+		juan perez -> Juan Perez
+3- Mostrar sólo las inicioales
+		Juan Perez -> J.P.
+		*/
+		//ejercicio 1 a mi manera
+		var text = prompt("Introduzca su nombre en minúsculas");
+		var firstLetter = text.charAt(0).toUpperCase(); // primer caracter con mayúsculas
+		var nextext = text.substring(1).toLowerCase(); // el resto del texto en minúsuclas
+
+
+		document.write(firstLetter + nextext + "<br/>");
+
+		// Ejercicico 1 del tirón (Profesor)
+
+		document.write("<br/> Ejercicio 1: " + text.charAt(0).toUpperCase() + text.substring(1).toLowerCase());
+
+		//Ejercicio dos.
+		//	var text = prompt("Introduzca texto");
+		var words = text.split(" ");
+		var position = 0;
+		var finaltext = "";
+		while (position < words.length) { // Este bucle va palabra a palabra recorriendo la lista de palabras
+			var word = words[position]; // porque quiero ir cogiendo en cada bucle la palabra siguiente.
+			position = position + 1; // avanzamos a la siguiente palabra de la lista.
+			finaltext = finaltext + " " + word.charAt(0).toUpperCase() + word.substring(1).toLowerCase(); // finaltext = finaltext + etc, porque va guardando el resultado de cada bucle anterior, guardando todo. Si no se pone el finaltext después de = sólo muestra la última palabra.
+		}
+		document.write("<br/> Ejercicio 2: " + finaltext);
+
+
+		//Ejercicio 3
+
+		//var text = prompt("Texto");
+		var words = text.split(" ");
+		var position = 0;
+		var finaltext = "";
+		while (position < words.length) {
+			var word = words[position];
+			position = position + 1;
+			finaltext = finaltext + word.charAt(0).toUpperCase() + ".";
+		}
+		document.write("<br/> Ejercicio 3: " + finaltext);
+	</script>
+</body>
+
+
+</html>

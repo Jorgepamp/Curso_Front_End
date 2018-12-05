@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejercicio Profesor String</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+
+	<script>
+		/* Ejercicios:
+1- hacer de un texto que la primera letra sea en mayúsculas y el resto en minúsuclas:
+		HOLA -> Hola
+		hola -> Hola
+2- Convertir la primera letra de cada palabra a mayúsculas y el resto en minúsculas.
+		juan perez -> Juan Perez
+
+3- Mostrar sólo las inicioales
+		Juan Perez -> J.P.
+
+
+*/
+		/*		// Ejercicio 1:
+		var text = prompt("Introduzca su nombre en minúsculas");
+		document.write("<br/>" + text.charAt(0).toUpperCase() + text.substring(1).toLowerCase());*/
+
+
+		//Ejercicio 2: // Proper Case (Primera mayúscula el resto minusculas)
+		/*	var text = prompt("Introduzca su nombre en minúsculas");
+			var positionspace = text.indexOf(" ");
+			var firstLetter = text.substring(0, positionspace);
+			document.write("<br/>" + firstLetter.charAt(0).toUpperCase() + firstLetter.substring(1).toLowerCase());
+
+			var secondword = text.substring(positionspace + 1, text.length);
+			var position2space = secondword.indexOf(" "); // así le pregunto el segundo espacio.
+			secondword = secondword.substring(0, position2space)
+			document.write("<br/>" + secondword.charAt(0).toUpperCase() + secondword.substring(1).toLowerCase());
+
+			var thirdword = text.substring(positionspace + 1, text.length);
+			var position3space = thirdword.indexOf(" ");
+			thirdword = thirdword.substring(o, position3space)
+
+			document.write("<br/>" + thirdword.charAt(0).toUpperCase() + thirdword.substring(1).toLowerCase());
+			*/
+
+		//ejerccicio 3 sin bucle, y haciendolo manualmente:
+
+		var text = prompt("Introduzca su nombre completo en minúsculas");
+		/*var positionspace = text.indexOf(" ");
+		var letter1 = text.charAt(0).toUpperCase();
+		document.write(text + "<br/>")
+		document.write(letter1 + ".");
+
+		var letter2 = text.charAt(positionspace + 1).toUpperCase();
+		document.write(letter2 + ".");
+
+		var position2space = text.indexOf(" ", positionspace + 1);
+		var letter3 = text.charAt(position2space + 1).toUpperCase();
+		document.write(letter3 + ".");*/
+
+		//Ejercicio 3 con bucle. A veces cambiando el orden puede darte la solución (?)
+		/* var positionspace = 0;
+		var letter = text.charAt(0).toUpperCase();
+		var initials = "";
+		while (positionspace >= 0) {
+			//	letter = text;
+			initials = initials + letter;
+			positionspace = text.indexOf(" ", positionspace + 1);
+			letter = text.charAt(positionspace + 1).toUpperCase();
+		}
+		document.write(initials); */
+
+		// Ejercicio 2:
+
+		var positionspace1 = text.indexOf(" ");
+		var first = text.charAt(0).toUpperCase();
+		var restword = text.substring(1, positionspace1).toLowerCase();
+		var proppercase = first + restword;
+		var positionspace2;
+
+		while (positionspace1 >= 0) {
+			positionspace2 = text.indexOf(" ", positionspace1 + 1);
+			if (positionspace2 == -1) {
+				positionspace2 = text.length;
+			}
+			first = text.charAt(positionspace1 + 1).toUpperCase();
+			restword = text.substring(positionspace1 + 2, positionspace2);
+			proppercase = proppercase + " " + first + restword;
+			positionspace1 = text.indexOf(" ", positionspace1 + 1);
+		}
+
+
+		document.write(proppercase + "<br/>");
+	</script>
+</body>
+
+
+</html>

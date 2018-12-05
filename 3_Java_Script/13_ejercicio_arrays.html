@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Arrays - ciudades</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+
+	<script>
+		// Pedir al usuario las ciudades donde quiere viajar
+		//que vaya metiendo ciudades pero si no mete nada se deje de hacer la lista
+
+		var city;
+		var cities = new Array();
+		while (city !== "") {
+			city = prompt("Introduce las ciudades donde te gustaría viajar, cuando hayas terminado pulsa dos veces Enter: ");
+			cities.push(city); // push mete la ciudad en el array asignándole una posición
+		}
+		var position = 0;
+		var finaltext = "";
+		while (position < cities.length) {
+			finaltext = finaltext + "<br/>" + cities[position];
+			position = position + 1;
+		}
+		document.write("<br/> <b>Lista de ciudades: </b>" + finaltext);
+
+		// Ejemplo profesor:
+
+		/*
+	var ciudades = new Array();
+	var nuevaCiudad = prompt ("Introduce ciudades");
+	var i=0;
+	while (nuevaCiudad !== ""){
+		ciudades[i] =nuevaCiudad;
+		i= i+1;
+	}
+	i=0;
+	while (i< ciudades.length){
+		document.write("<br/>" + ciudades[i]);
+		i=i+1;
+	}
+
+
+
+		*/
+	</script>
+</body>
+
+
+</html>
