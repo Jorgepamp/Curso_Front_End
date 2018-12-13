@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css' />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<style>
 		BODY {
 
@@ -109,14 +111,108 @@
 			margin: 20px;
 			position: relative;
 		}
+
+
+		.circle-thin {
+			height: 95px;
+			width: 95px;
+			border-radius: 50%;
+			border: 8px solid #555;
+			text-align: center;
+			color: #191919;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin: 20px;
+			position: relative;
+		}
+
+		/* Para el TimeLine */
+
+		.container {
+			max-width: 1024px;
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		.timeline-item {
+			padding: 2em 1.5em 0em;
+			position: relative;
+			color: rgba(0, 0, 0, 0.7);
+			border-left: 2px solid rgba(0, 0, 0, 0.3);
+		}
+
+		.timeline-item p {
+			font-size: 1rem;
+		}
+
+		.timeline-item::before {
+			content: attr(date-is);
+			position: absolute;
+			left: 2em;
+			font-weight: bold;
+			top: 1.2em;
+			display: block;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			font-size: .785rem;
+		}
+
+		.datework {
+			left: 2em;
+			font-weight: bold;
+			top: 1.2em;
+			display: block;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			color: rgba(0, 0, 0, 0.7);
+			font-size: .785rem;
+			padding-top: 10px;
+		}
+
+		.timeline-item::after {
+			width: 10px;
+			height: 10px;
+			display: block;
+			top: 1em;
+			position: absolute;
+			left: -7.5px;
+			border-radius: 10px;
+			content: '';
+			border: 2px solid rgba(0, 0, 0, 0.3);
+			background: white;
+		}
+
+		.timeline-item:last-child {
+			-o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+			border-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+			border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+		}
+
+		/* Círculos idimoas */
+		.circular-chart {
+			display: block;
+			margin: 10px auto;
+			max-width: 80%;
+			max-height: 250px;
+		}
+
+		.circle {
+			stroke: #b0b0b0;
+			fill: none;
+			stroke-width: 2.8;
+			stroke-linecap: round;
+			animation: progress 1s ease-out forwards;
+		}
 	</style>
 
 </head>
 
 <body>
 
-	<div style="display:flex; justify-content:center; background-image: url('https://i0.wp.com/paredesdecoradas.com/wp-content/uploads/2016/10/paredes-decoradas-papel-de-parede-Madeira-0001.jpg')">
-		<div style="width:700px; display: flex; flex-direction: column; background-color: white;" ;>
+	<div style="display:flex; justify-content:center; background-image: url('https://imgur.com/km6OPzz.png')">
+		<div style="width:800px; display: flex; flex-direction: column; background-color: white;" ;>
 			<div class="head-info">
 				<h3>Jorge Pampliega Pedreira</h3>
 				<div class="vl"></div>
@@ -130,29 +226,40 @@
 				<br /><br />
 				<img src="https://imgur.com/dOKRGXm.png" style="width: 130px">
 			</div>
-			<div>
-				<h4>ESPECIALIDADES</h4>
-			</div>
-			<div>
-				<h4>EDUCACIÓN</h4>
-				<div>
-					<div>2018- ACT<br />
-						Curso Front End<br />
-						Generation Spain<br />
-					</div><br />
-					<div>2016 - 2017<br />
-						Master en Dirección y Realización de Series de Ficción<br />
-						Universidad Antonio de Nebrija<br />
-					</div><br />
-					<div>2014 - 2014<br />
-						Curso Marketing Online<br />
-						IAB Spain<br />
-					</div><br />
-					<div>2009 - 2015 <br />
-						Licenciatura en Publicidad y Relaciones Públicas<br />
-						Universidad Complutense de Madrid<br />
-					</div><br />
+			<div class="display">
+				<div style="flex: 1; justify-content: center; display: flex">
+					<div>
+						<h4 class="title">ESPECIALIDADES</h4>
+						<img src="https://imgur.com/zvZPvbZ.png" style="width: 310px;" />
 
+					</div>
+
+				</div>
+
+				<div style="flex: 1; justify-content: center; display: flex">
+					<div>
+						<div class="container">
+							<h4 class="title">EDUCACIÓN</h4>
+							<div style="margin: 10px">
+								<div class="timeline-item" date-is='2018- ACT'>
+									<span style="color:#4d7798;">Curso Front End</span><br />
+									Generation Spain<br />
+								</div>
+								<div class="timeline-item" date-is='2016 - 2017'>
+									<span style="color:#4d7798; ">Master en Dirección y Realización de Series de Ficción</span><br />
+									Universidad Antonio de Nebrija<br />
+								</div>
+								<div class="timeline-item" date-is='2014 - 2014'>
+									<span style="color:#4d7798; "> Curso Marketing Online</span><br />
+									IAB Spain<br />
+								</div>
+								<div class="timeline-item" date-is='2009 - 2015'>
+									<span style="color:#4d7798; ;">Licenciatura en Publicidad y Relaciones Públicas</span><br />
+									Universidad Complutense de Madrid<br />
+								</div><br />
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="display">
@@ -255,6 +362,12 @@
 						<div class="squarefull"></div>
 						<div class="squareempty"></div>
 						<div class="squareempty"></div><br /><br />
+						<div class="textwork">Java Script</div>
+						<div class="squarefull"></div>
+						<div class="squarefull"></div>
+						<div class="squarefull"></div>
+						<div class="squareempty"></div>
+						<div class="squareempty"></div><br /><br />
 					</div>
 				</div>
 				<div style="flex: 1; justify-content: center; display: flex" class="work">
@@ -262,35 +375,43 @@
 
 						<h4 class="title">EXPERIENCIA LABORAL</h4>
 						<div class="workexp">
-							<img src="https://pbs.twimg.com/profile_images/552856793265606657/3brS1nVU_400x400.png" style="width: 70px; float:left; margin:10px;">
-							<div>Mayo 2017 - Febrero 2018 <br />
-								Departamento de Guion y Dirección<br />
-								Plano a Plano.</div><br /><br />
+							<img src="https://pbs.twimg.com/profile_images/552856793265606657/3brS1nVU_400x400.png" style="width: 70px; float:left; margin:4px;">
+							<div class="datework">Mayo 2017 - Febrero 2018 <br /></div>
+							<div>
+								<span style="color:#4d7798; ">Departamento de Guion y Dirección</span><br />
+								<div style="margin-left: 80px;margin-top: 10px;">Plano a Plano</div>
+							</div><br /><br />
 						</div>
 						<div class="workexp">
 							<img src="https://startupxplore.com/uploads/ff8080814ff47037014ff4fc60fe0056-large.png" style="width: 60px; float:left; margin:10px;">
-							<div>Septiembre 2015 - Enero 2016<br />
-								Community Management y campañas<br />
-								de Marketing<br />
-								MainTool.</div><br /><br />
+							<div class="datework">Septiembre 2015 - Enero 2016<br /></div>
+							<div>
+								<span style="color:#4d7798; ">Community Management y campañas<br />
+									de Marketing</span><br />
+								<div style="margin-left: 80px; margin-top: 10px;">MainTool</div>
+							</div><br /><br />
 						</div>
 						<div class="workexp">
 							<img src="https://imgur.com/9jsvDre.png" style="width: 60px; float:left; margin:10px;">
-							<div>Septiembre 2014 - Abril 2015<br />
-								Puesta en marcha de cero de la marca<br />
-								RawSox LTD. Brand Management,<br />
-								ecommerce, apertura de cuentas,<br />
-								seguimiento, Community Management y<br />
-								campañas de Marketing<br />
-								RawSox LTD</div><br /><br />
+							<div class="datework">Septiembre 2014 - Abril 2015<br /></div>
+							<div>
+								<span style="color:#4d7798; justify-content: center; display: flex">Puesta en marcha de cero de la marca
+									RawSox LTD. Brand Management,
+									ecommerce, apertura de cuentas,
+									seguimiento, Community Management y
+									campañas de Marketing</span><br />
+								<div style="margin-left: 80px;">RawSox LTD</div>
+							</div><br /><br />
 						</div>
 						<div class="workexp">
-							<img src="http://aiim.es/wp-content/uploads/2016/12/ETSII-UPM.png" style="width: 70px; float:left; margin:10px;">
-							<div>Septiembre 2012 - Junio 2013<br />
-								Apoyo al gabinete de prensa, organización<br />
-								de eventos y apoyo en redes solciales.<br />
-								Escuela Técnica Superior de Ingenieros<br />
-								Industriales</div><br /><br />
+							<img src="https://pbs.twimg.com/profile_images/501430935770759168/V45A_TF__400x400.png" style="width: 60px; float:left; margin:10px;">
+							<div class="datework">Septiembre 2012 - Junio 2013<br /></div>
+							<div>
+								<span style="color:#4d7798; ">Apoyo al gabinete de prensa, organización<br />
+									de eventos y apoyo en redes solciales.</span><br />
+								<div style="margin-left: 80px; margin-top: 10px;">Escuela Técnica Superior de Ingenieros
+									Industriales</div>
+							</div><br /><br />
 						</div>
 					</div>
 				</div>
@@ -299,21 +420,43 @@
 			<br />
 			<div class="display">
 				<div>
-					<h4>IDIOMAS</h4>
+					<h4 class="title">IDIOMAS</h4>
 					<div style="display:flex; flex-direction: row">
-						<div class="circle-two ">
-							<span style="margin-bottom: 1px;  font-size: 20px">Español</span>
-							<span style="font-size: 12px">Nativo</span>
+						<div style="position:relative;width: 150px">
+							<div style="position:absolute;display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center;">
+								Español<br />
+								Nativo
+							</div>
+							<svg viewBox="0 0 36 36" class="circular-chart">
+								<path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+						      a 15.9155 15.9155 0 0 1 0 31.831
+						      a 15.9155 15.9155 0 0 1 0 -31.831" />
+							</svg>
 						</div>
 
-						<div class="circle-two">
-							<span style="margin-bottom: 1px;  font-size: 20px">English</span>
-							<span style="font-size: 12px">Advance Level</span>
+						<div style="position:relative;width: 150px">
+							<div style="position:absolute; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center;">
+								English<br />
+								<spam>Advance Level</spam>
+							</div>
+							<svg viewBox="0 0 36 36" class="circular-chart">
+								<path class="circle" stroke-dasharray="80, 100" d="M18 2.0845
+						      a 15.9155 15.9155 0 0 1 0 31.831
+						      a 15.9155 15.9155 0 0 1 0 -31.831" />
+							</svg>
 						</div>
-						<div class="circle-two">
-							<span style="margin-bottom: 1px;  font-size: 20px">Français</span>
-							<span style="font-size: 12px">Niveau de base</span>
+						<div style="position:relative;width: 150px">
+							<div style="position:absolute;display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center;">
+								Français<br />
+								Niveau de base
+							</div>
+							<svg viewBox="0 0 36 36" class="circular-chart">
+								<path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+									a 15.9155 15.9155 0 0 1 0 31.831
+									a 15.9155 15.9155 0 0 1 0 -31.831" />
+							</svg>
 						</div>
+
 					</div>
 				</div>
 
