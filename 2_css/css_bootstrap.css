@@ -1,0 +1,29 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+.col-sm {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(86, 61, 124, .15);
+  border: 1px solid rgba(86, 61, 124, .2);
+}
+
+.columexample {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  background-color: #6f839d;
+  padding: 20px;
+  border: solid 5px #585858;
+  margin: 1px;
+}
+
+.row {
+  /* para alinear en el eje Y*/
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #e6e6e6;
+}

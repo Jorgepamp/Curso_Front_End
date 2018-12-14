@@ -176,9 +176,8 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* min-width: 100%;
-  min-height: 100%; */
-  height: 667px;
+  height: 100vh;
+  /* se pone el 100% del viewport horizontal (Pantalla completa)*/
   width: 100%;
   display: block;
   position: relative;
@@ -285,81 +284,44 @@ p {
   }
 }
 
-/*----- typed effect ---*/
-.typed-cursor {
-  opacity: 0;
-}
-
 /* -------------------------- 4) About ------------------------------------ */
 #aboutme {
-  min-height: 700px;
-  display: inline-block;
+  max-height: 700px;
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  overflow: hidden;
+}
+
+.myInfo {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
 }
 
 .imageaboutme {
-  background-image: url("https://images.unsplash.com/photo-1517245480009-64056ebabb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
   padding: 0;
   margin: 0;
-  min-height: 50%;
   width: 50%;
   height: 700px;
-  float: left;
 }
 
-.titleInfo {
-  padding-right: 10px;
-  font-weight: 500;
-  font-size: 13px;
-}
-
-.wrap-about {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  display: block;
-  min-height: 480px;
-}
-
-.wrap-about .w-content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%);
-}
-
-.wrap-about .w-content td {
+.myInfoTable td {
   font-size: 13px;
   font-weight: 300;
 }
 
-.wrap-about .w-content td.title {
+.myInfoTable td.title {
   padding-right: 10px;
   font-weight: 500;
 }
 
-.wrap-about .w-content td.break {
+.myInfoTable td.break {
   padding-right: 15px;
 }
 
-.wrap-about .w-content tr {
+.myInfoTable tr {
   height: 35px;
-}
-
-.wrap-about .head-about {
-  font-size: 13px;
-  line-height: 34px;
-  letter-spacing: 0.5px;
-  font-weight: 300;
-}
-
-.wrap-about .name {
-  margin: 40px 0 20px 0;
-  font-size: 14px;
 }
