@@ -68,6 +68,12 @@ img {
   outline: none;
 }
 
+/* Make the image fully responsive */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
 /* -------------------------- 2) Header ------------------------------------ */
 .header {
   width: 100%;

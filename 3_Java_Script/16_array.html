@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Array</title>
+	<meta charset="UTF-8" />
+
+</head>
+
+<body>
+
+	<script>
+		//Esta parte ya hace el ejerccicio entero.
+		// var Array_numbers = [3, 7, 85, 10, 55, 2, 11, 12, 2]
+		// Array_numbers = Array_numbers.sort(function(a, b) {
+		// 	return a - b
+		// });
+		//
+		// console.log(Array_numbers)
+
+		var Array_numbers = [3, 7, 85, 10, 22, 2]
+		var numMenor = Array_numbers[0];
+		for (var i = 0; i < 6; i++) {
+			if (numMenor > Array_numbers[i]) {
+				numMenor = Array_numbers[i];
+			}
+		}
+		// if (numMenor > Array_numbers[1]) {
+		// 	console.log("el 0 es mayor");
+		// }
+		// if (numMenor > Array_numbers[2]) {
+		// 	numMenor = Array_numbers[2];
+		// }
+		// if (numMenor > Array_numbers[3]) {
+		// 	numMenor = Array_numbers[3];
+		// }
+		// if (numMenor > Array_numbers[4]) {
+		// 	numMenor = Array_numbers[4];
+		// }
+		// if (numMenor > Array_numbers[5]) {
+		// 	numMenor = Array_numbers[5];
+		// }
+		document.write("Numero menor= " + numMenor + "<br/>");
+		document.write("Array: " + "<br/>");
+		var arrayOrd = new Array();
+		arrayOrd[0] = numMenor;
+		var segMenor = Array_numbers[0];
+		for (var i = 0; i < 4; i++) {
+			document.write(Array_numbers[i] + "<br/>")
+		}
+	</script>
+</body>
+
+
+</html>
