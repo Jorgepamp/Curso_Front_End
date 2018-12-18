@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones</title>
+
+</head>
+
+<body>
+
+
+
+    <script>
+        // 1) Función básica: Ni recibe ni devuelve datos
+        function showtitle() {
+            document.write("<h3>Título de la página.</h3>");
+            document.write("<br/>");
+        }
+        showtitle(); // Invocar una función
+
+        // 2) Función que recibe datos
+        function calculateDiscount(prize, discount) {
+            var prizeDiscount;
+            prizeDiscount = prize - prize * discount / 100;
+            document.write("Precio: " + prize + ", descuento: " + discount + ", total: " + prizeDiscount + "<br/>");
+        }
+        //Ejemplo 1:
+        calculateDiscount(100, 15);
+        calculateDiscount(430, 25);
+        //Ejemplo 2: dando otras variables a la misma función.
+        var otherPrize = 300;
+        var otherDiscount = 20;
+        calculateDiscount(otherPrize, 5);
+        calculateDiscount(otherPrize, otherDiscount);
+    </script>
+</body>
+
+</html>

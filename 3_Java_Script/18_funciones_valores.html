@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Funciones Que devuelven Valores</title>
+</head>
+
+<body>
+    <script>
+        // 1) Funciones que devuelven un valor
+
+        function putTitle() {
+            return "Título de funciones con retorno";
+        }
+
+        document.write("<h3>" + putTitle() + "</h3>");
+        document.write("<h6>" + putTitle() + "</h6>");
+        var titleWeb = "<h3>" + putTitle() + "</h3>";
+        document.write(titleWeb)
+
+        function putH(text, level) //Level: h1, h2...
+        {
+            var openH = "<h" + level + ">"
+            var closeH = "<h" + level + ">"
+            return openH + text + closeH
+        }
+        document.write(putH("Cabecera nivel 1", 1))
+        document.write(putH("Cabecera nivel 2", 2))
+    </script>
+</body>
+
+</html>
