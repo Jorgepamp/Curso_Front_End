@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Funciones Que devuelven Valores</title>
+</head>
+
+<body>
+    <script>
+        //Ejercicio 1: que muestre las cabeceras de h1 a h6 mediante bucle
+        function dateCabecera(texto) {
+            for (i = 1; i <= 6; ++i) {
+                var abreH = "<h" + i + ">";
+                var cierraH = "</h" + i + ">";
+                document.write(abreH + texto + cierraH);
+            }
+        }
+        dateCabecera("Cabecera");
+
+        //Ejercicio 2: Recibe 3 parámetros. Los dos primeros son operandos, el tercer oeprador ( suma "+", resta "-", multip "*", div "/") y que muestre el resultado (dentro de la función). Usar condicionales
+
+        function operation(number1, number2, operator) {
+            var number1;
+            var number2;
+            var operator;
+            if (operator = "+") {
+                operation = number1 + operator + number2;
+                var suma = number1 + number2;
+            }
+            if (operator = "-") {
+                operation = number1 + operator + number2;
+                var suma = number1 - number2;
+            }
+            if (operator = "/") {
+                operation = number1 + operator + number2;
+                var suma = number1 / number2;
+            }
+            if (operator = "*") {
+                operation = number1 + operator + number2;
+                var suma = number1 * number2;
+            }
+
+            document.write("<br/>" + operation + "=" + suma + "<br/>");
+        }
+
+        operation(8, 5, "*");
+
+        // Una funcion que eleve un número al cubo.
+        function multiple(number) {
+            number = number * number * number
+            document.write("<br/>" + number + "<br/>")
+        }
+
+        multiple(3)
+    </script>
+</body>
+
+</html>
