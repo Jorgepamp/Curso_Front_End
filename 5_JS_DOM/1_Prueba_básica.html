@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Elementos DOM del siguiente Div</h1>
+    <div
+      id="un_div"
+      style="background-color: #bfdbec; width: 460px; padding: 10px;"
+    >
+      <p>Un Texto</p>
+      <table id="tabla_países">
+        <tr>
+          <td>Ciudad</td>
+          <td>País</td>
+        </tr>
+        <tr>
+          <td>Madrid</td>
+          <td>España</td>
+        </tr>
+        <tr>
+          <td>Lisboa</td>
+          <td>Portugal</td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      //Document es el objeto tipo DOM de nuestra página web
+      var unDiv = document.getElementById("un_div");
+      var nodeH2 = document.createElement("h2");
+      var textH1 = document.createTextNode("Un subtitulo añadido por JS");
+      nodeH2.appendChild(textH1);
+      unDiv.appendChild(nodeH2);
+
+      // unDiv.setAttribute("style", "background-color: red"); // sobreescribiendo el style ya puesto.
+      //Document lo que hace es llamar a lo que vaya después del punto.(?)
+      document
+        .getElementsByTagName("p")[0] // es necesario poner el [0]  aunque la array tenga sólo un elemento para que lo tome.
+        .appendChild(document.createTextNode("Texto Append"));
+    </script>
+  </body>
+</html>
