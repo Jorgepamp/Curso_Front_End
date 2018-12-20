@@ -23,3 +23,32 @@ function clickboton() {
 
 // hace que se anime al pulsar el botón.
 boton.setAttribute("onclick", "clickboton()")
+
+var botonStop = divMarco.appendChild(document.createElement("input"));
+botonStop.setAttribute("type", "button");
+botonStop.setAttribute("Value", "¡Párate!");
+
+function clickbotonstop() {
+    for (var i = 0; i < arrayDiv.length; i++) {
+        arrayDiv[i].style.webkitAnimationPlayState = "paused";
+    }
+}
+botonStop.setAttribute("onclick", "clickbotonstop()")
+
+/* el mismo caso pero en un solo botón. En vez de dos botones.
+Crear el boton en el html antes del marco pondríamos: <input type="button" value="Play" onclick="playPauseAnim('play')"/>
+
+en JS tenemos que hacer la funcion que sea capaz de hacer play y pause con el mismo botón:
+
+var arrayDiv = document.getElementsByClassName("circulo");
+function playPauseAnim(estado) {
+    var playState = "paused"
+    if (estado == "play"){
+        playState ="runing";
+    }
+    for (var i = 0; i < arrayDiv.length; i++) {
+        arrayDiv[i].style.webkitAnimationPlayState = playState;
+    }
+}
+
+*/
