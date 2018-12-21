@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Listas</title>
+    <meta charset="UTF-8" />
+
+</head>
+
+<body>
+    <h3>Formulario de texto</h3>
+    <input type="button" value="Validar" onclick="validar();" />
+    <form action="mailto:jorge.pp.91@gmail.com" method="get">
+
+        Nombre<br />
+        <input id="name" type="text" name="Nombre" size="30"><br />
+        Apellido:<br />
+        <input id="Apellido" type="text" name="apellido" maxlength="30"><br />
+        Edad:<br />
+        <input id="edad" type="text" name="Edad"><br />
+        Contraseña:<br />
+        <input type="password" name="pwd" /><br />
+        Otros:<br />
+        <textarea id="sugerencia"> Otros datos </textarea>
+
+        <br /><br />
+        <input type="submit" value="Submit">
+
+    </form><br>
+
+    <h3>Formulario de opciones</h3>
+    <form action="jorge.pp.91@gmail.com" method="get">
+        Nacionalidad<br />
+        <input type="radio" name="Nacionalidad" value="Español"> Español<br />
+        <input type="radio" name="Nacionalidad" value="Otro"> Otro<br /><br />
+
+        Género<br />
+        <input type="radio" name="Genero" value="Masculino"> Masculino<br />
+        <input type="radio" name="Genero" value="Femenino"> Femenino<br />
+        <input type="radio" name="Genero" value="Otro"> Otro<br /><br />
+        <input type="submit" value="Submit">
+
+
+    </form>
+
+    <h3>Helado preferido</h3>
+    <form action="" method="post">
+        <!-- action es para donde queremos enviar la información puede ser un mail o un archivo o lo que quieras y el método es la forma de enviar el cuestionario-->
+        <input type="checkbox" name="preferido1" value="chocolate" /> Chocolate<br />
+        <input type="checkbox" name="preferido2" value="vanilla" /> Vainilla<br />
+        <input type="checkbox" name="preferido3" value="mint" /> Fresa<br /><br />
+        <input type="submit" value="Submit">
+    </form>*/
+
+    <script src="4_formulario_js.js"></script>
+</body>
+
+</html>
