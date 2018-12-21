@@ -26,6 +26,7 @@ function validar() {
     var inputpassword_rep = document.getElementById("password_rep");
     var password_rep = inputpassword_rep.value;
     validateInput(inputpassword_rep, password_rep);
+
 }
 
 function validateInput(inputTexto, texto) {

@@ -3,6 +3,11 @@
 1) General
 2) Header
 3) Typhography
+4) Helper
+5) Banner
+6) About me
+7) Special Skills
+8) Sections
  */
 /* -------------------------- 1) General ------------------------------------ */
 *,
@@ -128,6 +133,7 @@ img {
   z-index: 2;
 }
 
+
 /* -------------------------- 3) Typhography ------------------------------------ */
 h1,
 h2,
@@ -187,7 +193,107 @@ p {
   font-weight: 400;
 }
 
-/* -------------------------- 3) Banner ------------------------------------ */
+/*----------------------------------------- 4) Helper --------------------------------------------------*/
+.no-pad {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.pad-80 {
+  padding-top: 80px;
+}
+
+.mar-t-50 {
+  margin-top: 50px !important;
+}
+
+.mar-tm-10 {
+  margin-top: -10px;
+}
+
+.white-col {
+  background: #ffffff;
+  padding: none;
+}
+
+/*---- span -----*/
+.title-small span {
+  position: relative;
+
+}
+
+.title-small span:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  height: 3px;
+  background: #DEDEDE;
+  width: 48px;
+  left: 0;
+}
+
+.title-small-center span {
+  position: relative;
+}
+
+.title-small-center span:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 3px;
+  background: #DEDEDE;
+  width: 28px;
+  left: 0;
+}
+
+/*----- background ------*/
+.grey-bg {
+  background: #f6f6f6;
+  padding: 120px 0;
+  display: block;
+}
+
+.white-bg {
+  background: #ffffff;
+  padding: 120px 0;
+  display: block;
+}
+
+/*-------- content --------*/
+.content-detail {
+  font-weight: 400;
+  margin-top: 70px;
+  line-height: 30px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+.content-details {
+  font-weight: 400;
+  margin-top: 40px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.pad-bottom {
+  padding-bottom: 80px;
+}
+
+.text-detail {
+  margin-top: 30px;
+  color: #5f5f5f;
+}
+
+.listing-item {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* -------------------------- 5) Banner ------------------------------------ */
 #imagebanner {
   background-image: url("https://imgur.com/F6r8GGm.png");
   -webkit-background-size: cover;
@@ -311,7 +417,7 @@ p {
   }
 }
 
-/* -------------------------- 4) About ------------------------------------ */
+/* -------------------------- 6) About Me------------------------------------ */
 #aboutme {
   max-height: 700px;
   display: flex;
@@ -352,4 +458,117 @@ p {
 
 .myInfoTable tr {
   height: 35px;
+}
+
+/* -------------------------- 7) Special Skills------------------------------------ */
+
+#SpecialSkills {
+  max-height: 1024px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imagesSpecialSkills {
+  margin-top: 20px;
+  padding: 20px 0 60px;
+}
+
+/*----------------------------------------- 8) Sections --------------------------------------------------*/
+/*---------- a. portfolio -----------*/
+ul.portfolio-image {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul.portfolio-image li {
+  float: left;
+  display: block;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 46%;
+}
+
+ul.portfolio-image li:hover {
+  cursor: pointer;
+}
+
+ul.portfolio-image li:hover img {
+  -webkit-filter: grayscale(20%);
+  transform: scale(1.15);
+}
+
+ul.portfolio-image li:hover .image-bg {
+  opacity: 1;
+}
+
+ul.portfolio-image li:hover .description-wrap {
+  background: rgba(186, 186, 186, 0.6);
+}
+
+ul.portfolio-image li img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-filter: grayscale(100%);
+  transition: filter, transform, 0.5s;
+}
+
+ul.portfolio-image li .decription-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(242, 242, 242, 0.4);
+  padding: 20px;
+  transition: background, 0.5s;
+}
+
+ul.portfolio-image li .image-bg {
+  color: #2f2f2f;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  -ms-transform: translate(-50%, -50%);
+  /* IE 9 */
+  -webkit-transform: translate(-50%, -50%);
+  /* Chrome, Safari, Opera */
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 10px 0;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  transition: opacity, 0.5s;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  color: transparent;
+}
+
+ul.portfolio-image li .desc {
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  left: 0;
+  display: table-cell;
+  right: 0;
+  text-align: center;
+  color: #2f2f2f;
+  font-size: 14px;
+  font-weight: 700;
 }
