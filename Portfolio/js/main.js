@@ -15,27 +15,27 @@
 
   $(document).ready(function () {
 
-    //active menu
-    $(document).on("scroll", onScroll);
-
-    $('a[href^="#"]').on('click', function (e) {
-      e.preventDefault();
-      $(document).off("scroll");
-
-      $('a').each(function () {
-        $(this).removeClass('active');
-      })
-      $(this).addClass('active');
-
-      var target = this.hash;
-      $target = $(target);
-      $('html, body').stop().animate({
-        'scrollTop': $target.offset().top + 2
-      }, 500, 'swing', function () {
-        window.location.hash = target;
-        $(document).on("scroll", onScroll);
-      });
-    });
+    // //active menu
+    // $(document).on("scroll", onScroll);
+    //
+    // $('a[href^="#"]').on('click', function (e) {
+    //   e.preventDefault();
+    //   $(document).off("scroll");
+    //
+    //   $('a').each(function () {
+    //     $(this).removeClass('active');
+    //   })
+    //   $(this).addClass('active');
+    //
+    //   var target = this.hash;
+    //   $target = $(target);
+    //   $('html, body').stop().animate({
+    //     'scrollTop': $target.offset().top + 2
+    //   }, 500, 'swing', function () {
+    //     window.location.hash = target;
+    //     $(document).on("scroll", onScroll);
+    //   });
+    // });
 
 
     //scroll js
@@ -108,13 +108,49 @@
     });
 
     //pop up porfolio
-    $('.portfolio-image li a').magnificPopup({
-      type: 'image',
-      gallery: {
-        enabled: true
-      }
+    // $('.portfolio-image li a').magnificPopup({
+    //   type: 'image',
+    //   gallery: {
+    //     enabled: true
+    //   }
       // other options
-    });
+    // });
+
+
+    //pop up porfolio
+    // Example with multiple objects
+$('#uxui').magnificPopup({
+// mainClass: "white-popup", // esto es para ponerles estilos.
+    items: [
+      {
+        src: 'https://imgur.com/IPpHV3Z.png'
+      },
+      {
+        src: 'https://imgur.com/fTBMZer.png',
+      },
+    ],
+    gallery: {
+      enabled: true
+    },
+    type: 'image' // this is default type
+});
+
+
+$('#shortFilm').magnificPopup({
+
+  disableOn: 700,
+  type: 'iframe',
+  mainClass: 'mfp-fade',
+  removalDelay: 160,
+
+  items: [
+    {
+      src: 'https://www.youtube.com/watch?v=LW4_0ZrjQkA'
+    },
+],
+});
+
+
 
     //Skill
     jQuery('.skillbar').each(function () {
