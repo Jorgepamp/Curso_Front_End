@@ -142,12 +142,17 @@ $('#shortFilm').magnificPopup({
   type: 'iframe',
   mainClass: 'mfp-fade',
   removalDelay: 160,
+ iframe: {
+   patterns:{
+     youtube:{
+       index:"youtube.com/",
+       id:"v=",
+       src: "https://www.youtube.com/embed/%id%?autoplay=1"
+     }
+   }
 
-  items: [
-    {
-      src: 'https://www.youtube.com/watch?v=LW4_0ZrjQkA'
-    },
-],
+ }
+
 });
 
 

@@ -39,6 +39,11 @@ body {
   overflow: initial;
 }
 
+.m-x-0 {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
 /* Scroll */
 .image-bg::-webkit-scrollbar {
   width: 8px;
