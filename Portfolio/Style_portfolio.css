@@ -670,13 +670,14 @@ ul.portfolio-image li .desc2 {
 }
 
 /*---------------------------- Work---------------------------- */
-/* .wrap-card {
+.wrap-card {
   position: relative;
   box-shadow: 0px 0px 0px #818181;
   transition: all 0.2s ease 0s;
-  -webkit-transform: translateY(0px) translateX(0px);
+  /* -webkit-transform: translateY(0px) translateX(0px); */
 }
 
+/*
 .wrap-card:before,
 .wrap-card:after {
   display: inline-block;
@@ -710,7 +711,8 @@ ul.portfolio-image li .desc2 {
 .wrap-card:hover:after,
 .wrap-card:hover:before {
   -webkit-transform: scaleX(1);
-} */
+}
+*/
 .card {
   background: #ffffff;
   padding: 30px 35px 45px 35px;
